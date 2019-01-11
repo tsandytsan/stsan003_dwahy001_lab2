@@ -1,6 +1,6 @@
 /*	Partner(s) Name & E-mail: Daniel Wahyu dwahy001@ucr.edu
  *	Lab Section: 024
- *	Assignment: Lab # 2 Exercise # 3
+ *	Assignment: Lab # 2 Exercise # 2
  *	Exercise Description: [optional - include for your own benefit]
  *	
  *	I acknowledge all content contained herein, excluding template or example
@@ -23,11 +23,6 @@ int main(void)
 			cntavail += temp_input & 0x01;
 			temp_input >>= 1;
 		}
-		
-		cntavail = 4 - cntavail;
-		if (cntavail == 0x00) {
-			cntavail = 0x80;
-		}
-		PORTC = cntavail;
+		PORTC = 4 - cntavail;
 	}
 }
